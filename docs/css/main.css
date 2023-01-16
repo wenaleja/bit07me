@@ -1,17 +1,391 @@
-.nombre {
-    color: crimson;
-    margin-left: 380px;
-    margin-top: 20px;
-    font-family: 'Nanum Gothic', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.imagen{
+/*fuentes a utilizar 
+font-family: 'Gabriela', serif;
+font-family: 'League Spartan', sans-serif;*/
+
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo{
+    color: #4be2bd;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}  
+
+/* header */
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #7F7FD5; 
+     /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86a8e7c4, #7f7fd5c7), url(../img/imagen1.png);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86a8e7c4, #7f7fd5c7), url(../img/imagen1.png); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color: aliceblue;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: aliceblue;
+}
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: aliceblue;
+}
+
+.textos-header h3{
+    font-size: 20px;
+    font-weight: 300;
+    color: aliceblue;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Sobre mi */
+
+.contenedor-acerca{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-info{
+    width: 28%;
+    margin-top: -50px;
+}
+
+.acerca .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+    color: #4be2bd;
+}
+.contenido-textos h3 span{
+    background: rgb(0, 204, 255);
+    color: aliceblue;
     border-radius: 50%;
-    width: 20%;
-    height: 20%;
-    margin-left: 20rem;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0, .5);
+    margin-right: 5px;
+}
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
 }
 
-imgen:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  }
+/* Galeria */
+
+.habilidades {
+    background: #f2f2f2;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0, .5);
+}
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(130, 79%, 61%, 0.734);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img {
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: aliceblue;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/* Educación*/
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cards .card{
+    background: rgb(0, 204, 255);
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0, .6);
+}
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    display: block;
+}
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: aliceblue;
+}
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/*Experiencia*/
+
+.experiencias{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+.expe-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.expe-ind{
+    width: 28%;
+    text-align: center;
+}
+.expe-ind img{
+    width: 90%;
+}
+.expe-ind h3{
+    margin: 10px 0;
+    color: #4be2bd;
+}
+.expe-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* footer */
+
+footer {
+    background: #7F7FD5; 
+    /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86a8e7c4, #7f7fd5c7);  
+   /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #91EAE4, #86a8e7c4, #7f7fd5c7); 
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   padding: 30px 0 30px 0;
+   margin: auto;
+   overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #4be2bd;
+}
+.content-foo{
+    text-align: center;
+}
+.content-foo h4{
+    color: aliceblue;
+    border-bottom: 3px solid #4be2bd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.content-foo p{
+    color: lavenderblush;
+}
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: cornsilk;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+    .contenedor-acerca{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenedor-acerca .contenido-textos{
+        width: 90%;
+    }
+    .imagen-info{
+        width: 70%;
+    }
+    /* Galeria */
+    .imagen-port{
+        width: 44%;
+    } 
+    /* Educación*/
+    .cards{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards .card{
+        width: 90%;
+    }
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+    /* Experiencia*/
+    .expe-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .expe-ind{
+        width: 100%;
+        text-align: center;
+    }
+    .expe-ind:nth-child(1), .expe-ind:nth-child(2){
+        margin-bottom: 60px;
+    } 
+    .expe-ind img{
+        width: 90%;
+    }
+    
+    /*footer*/
+    .contenedor-footer{
+        flex-direction: column;
+        padding: 2px;
+        border: none;
+
+    }
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .content-foo h4{
+        border-bottom: 0 none;
+    }
+    .content-foo p{
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+    .titulo-final{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    nav > a{
+        margin-right: 5px;
+    }
+    .textos-header h1{
+        font-size: 35px;
+    }
+    .textos-header h2{
+        font-size: 20px;
+    }
+    /* Sobre mi*/
+    .imagen-info{
+        margin-bottom: 60px;
+    }
+    .acerca .contenido-textos{
+        width: 95%;
+    }
+    /* Galeria*/
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* Educación */
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+}
