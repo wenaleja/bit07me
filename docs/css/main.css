@@ -5,7 +5,7 @@
 }
 
 /*fuentes a utilizar 
-font-family: 'Gabriela', serif;
+font-family: 'Halant', serif;
 font-family: 'League Spartan', sans-serif;*/
 
 body {
@@ -125,6 +125,7 @@ header .textos-header{
     padding: 0px 0px 30px 15px;
     font-weight: 300;
     text-align: justify;
+    font-family: 'Halant', serif;
 }
 
 /* Galeria */
@@ -184,6 +185,7 @@ header .textos-header{
 .cards{
     display: flex;
     justify-content: space-evenly;
+    font-family: 'Halant', serif;
 }
 .cards .card{
     background: rgb(0, 204, 255);
@@ -237,6 +239,7 @@ header .textos-header{
 .expe-ind p{
     font-weight: 300;
     text-align: justify;
+    font-family: 'Halant', serif;
 }
 
 /* footer */
