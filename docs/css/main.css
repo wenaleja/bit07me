@@ -242,6 +242,72 @@ header .textos-header{
     font-family: 'Halant', serif;
 }
 
+
+/*  Proyectos */
+
+#mis-proyectos{
+    background: #7F7FD5; 
+    /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86a8e7c4, #7f7fd5c7);  
+   /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #91EAE4, #86a8e7c4, #7f7fd5c7); 
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    text-align: center;
+}
+
+#mis-proyectos .container{
+    padding: 10px 12px;
+}
+
+#mis-proyectos h2 {
+    margin-top: 15px;
+    font-size: 36px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+#mis-proyectos p{
+    margin-top: 20px;
+    font-family: 'Halant', serif;
+}
+
+#mis-proyectos button{
+    border: none;
+	color: #7F7FD5;
+	padding: 5px 40px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 17px;
+    font-family: 'League Spartan', sans-serif;
+    margin-top: 30px;
+}
+#mis-proyectos .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/login.png");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/formulario.png");
+}
+
 /* footer */
 
 footer {
